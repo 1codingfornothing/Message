@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>pages/index.jsp</welcome-file>
+
+        <welcome-file>counter</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>web.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/registServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogInServlet</servlet-name>
+        <servlet-class>web.LogInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogInServlet</servlet-name>
+        <url-pattern>/LogInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SendMessageServlet</servlet-name>
+        <servlet-class>web.SendMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendMessageServlet</servlet-name>
+        <url-pattern>/SendMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>web.CommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/commentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LikeServlet</servlet-name>
+        <servlet-class>web.LikeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LikeServlet</servlet-name>
+        <url-pattern>/LikeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>web.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FollowServlet</servlet-name>
+        <servlet-class>web.FollowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FollowServlet</servlet-name>
+        <url-pattern>/followServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DetailServlet</servlet-name>
+        <servlet-class>web.DetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailServlet</servlet-name>
+        <url-pattern>/detailServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <filter>
+        <filter-name>WordsFilter</filter-name>
+        <filter-class>utils.WordsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>WordsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CountFilter</filter-name>
+        <filter-class>web.CountFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CountFilter</filter-name>
+        <url-pattern>/detailServlet</url-pattern>
+    </filter-mapping>
+
+</web-app>
